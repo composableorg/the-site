@@ -1,14 +1,14 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 
-import { BaseAnchor } from './BaseAnchor';
+import { Anchor } from './Anchor';
 
 export default {
     title: 'Atoms/Base Anchor',
-    component: BaseAnchor,
-} as ComponentMeta<typeof BaseAnchor>;
+    component: Anchor,
+} as ComponentMeta<typeof Anchor>;
 
-const Template: ComponentStory<typeof BaseAnchor> = (args) => <BaseAnchor {...args} />;
+const Template: ComponentStory<typeof Anchor> = (args) => <Anchor {...args} />;
 
 export const Base = Template.bind({});
 Base.args = {

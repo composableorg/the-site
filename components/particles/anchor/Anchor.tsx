@@ -4,6 +4,6 @@ export interface BaseAnchorProps {
     anchorText : string
 };
 
-export const BaseAnchor = ({ anchorText, ...props}: BaseAnchorProps) => (
+export const Anchor = ({ anchorText, ...props}: BaseAnchorProps) => (
     <a {...props}>{anchorText}</a>
 );

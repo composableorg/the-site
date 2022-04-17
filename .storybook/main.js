@@ -1,3 +1,5 @@
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+
 module.exports = {
   "stories": [
     "../components/**/*.stories.mdx",
@@ -9,5 +11,9 @@ module.exports = {
     "@storybook/addon-interactions",
       "@storybook/addon-postcss",
   ],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
+  "webpackFinal": async config => {
+    config.resolve.plugins.push(new TsconfigPathsPlugin())
+    return config
+  }
 }

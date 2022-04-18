@@ -1,9 +1,9 @@
-name: Storybook Build and Deploy
+name: Storybook Build and Push
 on:
   push:
-    branches: [master, main]
+    branches: [main]
 jobs:
-  build-and-deploy:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -21,4 +21,4 @@ jobs:
           BRANCH: storybook-build # The branch the action should deploy to.
           FOLDER: docs-build # The folder that the build-storybook script generates files.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          TARGET_FOLDER: docs # The folder that we serve our Storybook files from
+          TARGET_FOLDER: sb-build # The folder that we serve our Storybook files from
